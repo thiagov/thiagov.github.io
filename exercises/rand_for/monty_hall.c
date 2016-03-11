@@ -1,4 +1,6 @@
 // https://www.reddit.com/r/dailyprogrammer/comments/1qdw40/111113_challenge_141_easy_monty_hall_simulation/
+//
+// https://rosettacode.org/wiki/Monty_Hall_problem#C
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -20,9 +22,10 @@ int main(int argc, const char *argv[]) {
     /* first tactic */
     tactic1 += (door == choice ? 1 : 0);
     /* second tactic */
-    reveal = door == choice ? (door + 1) % 3 : 3 - door - choice;
-    choice = 3 - choice - reveal;
-    tactic2 += (door == choice ? 1 : 0);
+    //reveal = door == choice ? (door + 1) % 3 : 3 - door - choice;
+    //choice = 3 - choice - reveal;
+    //tactic2 += (door == choice ? 1 : 0);
+    tactic2 += (door != choice ? 1: 0);
   }
 
   /* print results */
