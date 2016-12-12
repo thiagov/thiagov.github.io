@@ -1,16 +1,17 @@
+<div id="editor-output">
 <div id="editor">#include &lt;stdio.h&gt;
 #include &lt;stdlib.h&gt;
 
 int main() {
-    printf("Ola mundo.");
+    int i;
+    for (i = 0; i < 100; i++) {
+        printf("Ola mundo\n");
+    }
     return 0;
 }
 </div>
+<div id="output" ng-bind-html="vm.executedCode"></div>
+</div>
 
-<script>
-    var editor = ace.edit("editor");
-    editor.setTheme("ace/theme/monokai");
-    editor.getSession().setMode("ace/mode/c_cpp");
-    //editor.setValue("the new text here"); // or session.setValue
-    //editor.getValue(); // or session.getValue
-</script>
+
+<button class="btn btn-default" type="submit" ng-click="vm.compile()">Compilar</button>

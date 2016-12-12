@@ -10,6 +10,8 @@
     function configureRoutes($routeProvider) {
         $routeProvider
             .when('/', {
+                controller: 'HomeController',
+                controllerAs: 'vm',
                 templateUrl: 'view/home.html'
         });
     }
