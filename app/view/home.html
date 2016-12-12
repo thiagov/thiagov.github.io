@@ -1,0 +1,16 @@
+<div id="editor">#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+
+int main() {
+    printf("Ola mundo.");
+    return 0;
+}
+</div>
+
+<script>
+    var editor = ace.edit("editor");
+    editor.setTheme("ace/theme/monokai");
+    editor.getSession().setMode("ace/mode/c_cpp");
+    //editor.setValue("the new text here"); // or session.setValue
+    //editor.getValue(); // or session.getValue
+</script>
