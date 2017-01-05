@@ -6,13 +6,11 @@
         <title>Lab. AEDs I</title>
 
         <!-- Bootstrap core CSS -->
-        <link href="css/bootstrap.css" rel="stylesheet">
-        <!-- App base css -->
-        <link href="css/app_base.css" rel="stylesheet">
+        <link href="/assets/css/bootstrap.css" rel="stylesheet">
 
     </head>
     <body>
-        <nav class="navbar-inverse navbar-default">
+        <nav class="navbar-inverse navbar-default" ng-controller="HeaderController as vm">
             <div class="container">
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
@@ -28,18 +26,18 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-right">
+                        <li  ng-class="{active: vm.isActive('/editor_codigo')}"><a href="#/editor_codigo">Editor de Código</a></li>
                         <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                                Teaching<span class="caret"></span>
+                            <a href class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                Notas de aula<span class="caret"></span>
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a href="#">Laboratório de Algoritmos I</a></li>
-                                <li><a href="#">Interface Homem Máquina</a></li>
+                                <li><a href="#">Aula 1</a></li>
+                                <li><a href="#">Aula 2</a></li>
                             </ul>
                         </li>
-                        <li><a href="#">Projects</a></li>
-                        <li><a href="#">Lattes</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li  ng-class="{active: vm.isActive('/submissoes')}"><a href="#/submissoes">Entrega de Exercícios</a></li>
+                        <li  ng-class="{active: vm.isActive('/enviar_email')}"><a href>Enviar email</a></li>
                     </ul>
                 </div>
             </div>
@@ -50,26 +48,26 @@
         </div>
 
         <!-- Jquery -->
-        <script src="js/vendor/jquery-2.2.4.min.js"></script>
+        <script src="vendor/jquery-2.2.4.min.js"></script>
 
         <!-- AngularJS -->
-        <script src="js/vendor/angular.min.js"></script>
-        <script src="js/vendor/angular-route.min.js"></script>
-        <script src="js/vendor/angular-sanitize.min.js"></script>
-        <script src="js/vendor/angular-animate.min.js"></script>
-        <script src="js/vendor/ui-bootstrap-tpls.min.js"></script>
+        <script src="vendor/angular.min.js"></script>
+        <script src="vendor/angular-route.min.js"></script>
+        <script src="vendor/angular-sanitize.min.js"></script>
+        <script src="vendor/angular-animate.min.js"></script>
+        <script src="vendor/ui-bootstrap-tpls.min.js"></script>
 
         <!-- Bootstrap core JS_-->
-        <script src="js/vendor/bootstrap.min.js"></script>
+        <script src="vendor/bootstrap.min.js"></script>
 
         <!-- Editor de código -->
-        <script src="js/vendor/ace.js"></script>
+        <script src="vendor/ace.js"></script>
 
         <!-- App js -->
-        <script src="js/app.module.js"></script>
-        <script src="js/app.routes.js"></script>
-        <script src="js/home.controller.js"></script>
-
+        <script src="app.module.js"></script>
+        <script src="app.routes.js"></script>
+        <script src="layout/header.controller.js"></script>
+        <script src="editor_codigo/editor_codigo.controller.js"></script>
 
     </body>
 </html>

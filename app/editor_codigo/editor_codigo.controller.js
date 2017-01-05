@@ -3,14 +3,14 @@
 
     angular
         .module('app')
-        .controller('HomeController', HomeController);
+        .controller('EditorCodigoController', EditorCodigoController);
 
-    HomeController.$inject = ['$http'];
+    EditorCodigoController.$inject = ['$http'];
 
-    function HomeController($http) {
+    function EditorCodigoController($http) {
         var vm = this;
         var editor;
-        vm.title = 'HomeController';
+        vm.title = 'EditorCodigoController';
         vm.compile = compile;
 
         activate();
@@ -29,7 +29,8 @@
            data.code = source;
            $http({
                method: 'POST',
-               url: 'https://teste-api.herokuapp.com/compile',
+//               url: 'https://teste-api.herokuapp.com/compile',
+               url: 'http://localhost:3000/compile',
                data: data
            }).then(success).catch(error);
 
