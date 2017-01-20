@@ -17,6 +17,9 @@
                 templateUrl: 'editor_codigo/editor_codigo.html'
             }).when('/submissoes', {
                 templateUrl: 'submissoes/submissoes.html'
+            }).when('/aula1', {
+                templateUrl: 'notas_aula/aula1.html'
             });
+
     }
 })();
