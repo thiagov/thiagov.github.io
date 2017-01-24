@@ -1,5 +1,84 @@
-<h3>Assuntos abordados</h3>
+<style>
+.editor {
+    width: 50%;
+    height: 200px;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+</style>
 
-Introdução à programação;
-Introdução à linguagem C;
+<h3>Exemplos - Aula 1</h3>
 
+
+<h4>Primeiro programa em C</h4>
+
+<p>
+    Nosso primeiro programa em C é bastante simples: ele somente escreve na tela a mensagem "Ola mundo!".
+    Segue a implementação desse programa:
+</p>
+
+<div id="first-prog" class="editor">#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+
+int main(int argc, char *argv[]) {
+    printf("Ola mundo!");
+    return 0;
+}
+</div>
+
+<p>
+    Se você compilar e executar o programa acima, obterá a seguinte saída:
+</p>
+
+<pre>
+    <samp>Ola mundo!</samp>
+</pre>
+
+
+<p>
+    O que significa cada linha desse programa?
+</p>
+
+<dl>
+    <dt>Linhas 1-2</dt>
+    <dd>
+        Essas duas linhas começam da mesma forma: <code>#include&lt;...&gt;</code>. Vamos falar mais sobre
+        esse tipo de comando no decorrer do curso. Inicialmente, no entanto, você deve saber que essas linhas
+        servem para adicionar funcionalidades em nossos programas C. Para utilizar a função de imprimir na tela,
+        por exemplo (<code>printf</code>), precisamos da biblioteca <code>stdio.h</code>. As linhas 1 e 2
+        estão incluindo duas bibliotecas em nosso programa: <code>stdio.h</code> e <code>stdlib.h</code>.
+        A primeira nos dá acesso à função <code>printf()</code>, e a segunda nos da acesso à
+        função <code>system("PAUSE")</code>.
+    </dd>
+    <dt>Linha 4</dt>
+    <dd>
+        Nessa linha declaramos uma função, que chamamos de <code>main()</code>. A função <code>main()</code>
+        é a função principal de qualquer programa em C. A execução de um programa em C sempre começa a partir
+        do <code>main()</code>, e todo programa em C deve possuir essa função. O código da função é tudo aquilo
+        que fica entre as chaves: <code>{}</code>. Um código fora das chaves não será executado.
+        Veremos mais tarde como trabalhar com funções detalhadamente.
+    </dd>
+    <dt>Linhas 5</dt>
+    <dd>
+        Print, em inglês, significa imprimir. É exatamente o que o comando da linha 5 faz. Ele imprime
+        uma mensagem na tela. O comando <code>printf()</code> é uma função que imprime a mensagem
+        colocada entre parênteses na tela. A mensagem colocada entre parênteses deve estar entre aspas
+        duplas (<code>""</code>). Veremos mais tarde que um texto entre aspas duplas é chamado,
+        em programação, de String. Nesse caso, estamos imprimindo a String <code>"Ola mundo!"</code>
+        na tela.
+    </dd>
+    <dt>Linhas 6</dt>
+    <dd>
+        Essa linha é utilizada para finalizar a função <code>main()</code>. Entraremos em detalhes
+        sobre esse comando mais tarde. Por enquanto, devemos saber que nossa função <code>main()</code>
+        sempre terminar com um <code>return 0</code>. Vale notar que comandos escritos abaixo do
+        <code>return 0</code> e antes do fechamento das chaves não são executados pelo nosso programa!
+    </dd>
+</dl>
+
+<script>
+    var editor = ace.edit('first-prog');
+    editor.setTheme('ace/theme/monokai');
+    editor.getSession().setMode('ace/mode/c_cpp');
+</script>
