@@ -19,6 +19,10 @@
                 templateUrl: 'submissoes/submissoes.html'
             }).when('/aula1', {
                 templateUrl: 'notas_aula/aula1.html'
+            }).when('/aula2', {
+                templateUrl: 'notas_aula/aula2.html'
+            }).when('/aula3', {
+                templateUrl: 'notas_aula/aula3.html'
             });
 
     }

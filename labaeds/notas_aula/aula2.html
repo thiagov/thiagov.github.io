@@ -1,0 +1,143 @@
+<style>
+.editor {
+    width: 50%;
+    height: 200px;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+</style>
+
+<h5>Exemplos - Aula 2</h5>
+
+
+<h4>A qual caractere certo inteiro corresponde?</h4>
+
+<p>
+    Nesse exemplo vamos analisar um programa que deve ter o seguinte funcionamento: dado
+    um número inteiro qualquer, fornecido pelo usuário, devemos escrever na tela qual é
+    o caractere correspondente a tal número na tabela ASCII. O programa em C é mostrado
+    a seguir:
+</p>
+
+<div id="first-prog" class="editor">#include &lt;stdio.h&gt;
+
+int main(int argc, char *argv[]) {
+  int x;
+  printf("Entre com um numero inteiro: ");
+  scanf("%d", &x);
+
+  printf("O caractere correspondente ao numero digitado eh: %c\n", x);
+  return 0;
+}
+</div>
+
+<p>
+    Se você compilar e executar o programa acima, obterá uma saída do seguinte formato:
+</p>
+
+<pre>
+    <samp>
+        Entre com um numero inteiro: 65
+        O caractere correspondente ao numero digitado eh: A
+    </samp>
+</pre>
+
+
+<p>
+    No exemplo mostrado acima, o usuário entrou com o número 65. O programa mostrou, corretamente,
+    que o caractere correspondente a esse número na tabela ASCII é o caractere A.
+    Como esse programa funciona? Vamos analisar as linhas importantes desse código.
+</p>
+
+<dl>
+    <dt>Linha 6</dt>
+    <dd>
+        Nessa linha estamos somente lendo um valor que o usuário deve fornecer, usando a função
+        <code>scanf()</code>. Como especificado, o usuário deve entrar com um número inteiro. Dessa
+        forma, usamos o <code>"%d"</code> no <code>scanf()</code> para ler o valor. Também passamos
+        para o <code>scanf()</code> a variável que armazenará o valor digitado: nesse caso a variável
+        <code>x</code>. Devemos lembrar que o nome da variável deve vir precedido de um <code>&</code>
+        quando estamos lendo um tipo básico.
+    </dd>
+    <dt>Linha 8</dt>
+    <dd>
+        Nessa linha fazemos a impressão do caractere correspondente ao número inteiro armazenado
+        em nossa variável <code>x</code>. O procedimento é bastante simples: basta imprimir a
+        variável <code>x</code> (um número inteiro) utilizando <code>%c</code> ao invés de <code>%d</code>!
+        Na linguagem C, caracteres são mapeados por números da tabela ASCII. Dessa forma,  um valor
+        inteiro é automaticamente convertido para o caractere correspondente da tabela ao pedirmos
+        a impressão com <code>%c</code>.
+    </dd>
+</dl>
+
+
+<h3>Pergunta:</h3>
+Por que char - '0' converte um caractere para int?
+
+<h4>Segundos para horas, minutos e segundos</h4>
+
+<p>
+    Nesse exemplo queremos fazer um programa que, dado certo número de segundos, nos informa
+    a hora no formato horas:minutos:segundos. O programa é mostrado a seguir:
+</p>
+
+<div id="second-prog" class="editor">#include &lt;stdio.h&gt;
+
+int main(int argc, char *argv[]) {
+  int horas;
+  int minutos;
+  int segundos;
+
+  printf("Entre com a quantidade de segundos: ");
+  scanf("%d", &segundos);
+
+  minutos = segundos/60;
+  segundos = segundos%60;
+
+  horas = minutos/60;
+  minutos = minutos%60;  
+  
+  printf("%d horas, %d minutos e %d segundos!\n", horas, minutos, segundos);
+  return 0;
+}
+</div>
+
+<p>
+    Se você compilar e executar o programa acima, obterá uma saída do seguinte formato:
+</p>
+
+<pre>
+    <samp>
+        Entre com a quantidade de segundos: 600012
+        166:40:12
+    </samp>
+</pre>
+
+
+<p>
+    No exemplo mostrado acima, o usuário entrou com o número 600012. O programa mostrou, corretamente,
+    que 600012 segundos equivalem a 166 horas, 40 minutos e 12 segundos.
+    Como esse programa funciona? Vamos analisar as linhas importantes desse código.
+</p>
+
+<dl>
+    <dt>Linha 6</dt>
+    <dd>
+    </dd>
+    <dt>Linha 8</dt>
+    <dd>
+    </dd>
+</dl>
+
+
+<script>
+    var editor = ace.edit('first-prog');
+    editor.setTheme('ace/theme/monokai');
+    editor.getSession().setMode('ace/mode/c_cpp');
+
+    var editor2 = ace.edit('second-prog');
+    editor2.setTheme('ace/theme/monokai');
+    editor2.getSession().setMode('ace/mode/c_cpp');
+
+</script>
