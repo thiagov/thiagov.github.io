@@ -6,6 +6,9 @@
     margin-top: 10px;
     margin-bottom: 10px;
 }
+#second-prog {
+    height: 300px;
+}
 </style>
 
 <h5>Exemplos - Aula 2</h5>
@@ -71,10 +74,6 @@ int main(int argc, char *argv[]) {
     </dd>
 </dl>
 
-
-<h3>Pergunta:</h3>
-Por que char - '0' converte um caractere para int?
-
 <h4>Segundos para horas, minutos e segundos</h4>
 
 <p>
@@ -122,11 +121,30 @@ int main(int argc, char *argv[]) {
 </p>
 
 <dl>
-    <dt>Linha 6</dt>
+    <dt>Linha 11</dt>
     <dd>
+        Nessa linha estamos convertendo os segundos passados pelo usuário (armazenados na variável
+        <code>segundos</code>) para minutos. Para isso basta dividir os segundos por 60. Vale lembrar
+        que a divisão nesse caso é inteira (estamos dividindo um número inteiro por outro inteiro) e,
+        dessa forma, o resto dessa divisão é ignorado.
     </dd>
-    <dt>Linha 8</dt>
+    <dt>Linha 12</dt>
     <dd>
+        Como a divisão feita na linha 11 é inteira, precisamos agora saber quantos segundos restaram
+        após a conversão para minutos. Esse valor nada mais é que o resto da divisão do número
+        total de segundos por 60. Por exemplo, se queremos converter 123 segundos para minutos,
+        teremos <code>123/60 = 2</code> minutos, e <code>123%60=3</code> segundos. Essa linha, então,
+        está armazenando na variável <code>segundos</code> o valor de segundos não convertidos que
+        ficaram.
+    </dd>
+    <dt>Linha 14</dt>
+    <dd>
+        A lógica é a mesma da linha 11, porém agora convertendo os minutos para horas.
+    </dd>
+    <dt>Linha 15</dt>
+    <dd>
+         lógica é a mesma da linha 12, porém agora pegando os minutos que não puderam ser convertidos
+         para horas.
     </dd>
 </dl>
 

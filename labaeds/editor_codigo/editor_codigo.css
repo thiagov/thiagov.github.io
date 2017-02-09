@@ -8,14 +8,14 @@
 #editor {
     position: relative;
     width: 49%;
-    height: 200px;
+    height: 100%;
     float: left;
     margin-right: 2%;
 }
 #output {
     background-color: gray;
     width: 49%;
-    height: 200px;
+    height: 100%;
     float: left;
     padding: 10px;
     overflow: auto;
