@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html ng-app="app">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    
+        <title>Lab. AEDs I</title>
+
+        <!-- Bootstrap core CSS -->
+        <link href="vendor/bootstrap.css" rel="stylesheet">
+
+    </head>
+    <body>
+        <nav class="navbar-inverse navbar-default" ng-controller="HeaderController as vm">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#/">Laboratório de Algoritmos I</a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <!--li  ng-class="{active: vm.isActive('/editor_codigo')}"><a href="#/editor_codigo">Editor de Código</a></li-->
+                        <li class="dropdown">
+                            <a href class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                Exemplos<span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#/aula1">Aula 1</a></li>
+                                <li><a href="#/aula2">Aula 2</a></li>
+                            </ul>
+                        </li>
+                        <li  ng-class="{active: vm.isActive('/submissoes')}"><a href="#/submissoes">Entrega de Exercícios</a></li>
+                        <!--li  ng-class="{active: vm.isActive('/enviar_email')}"><a href>Enviar email</a></li-->
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container">
+            <div ng-view></div>
+        </div>
+
+        <!-- Jquery -->
+        <script src="vendor/jquery-2.2.4.min.js"></script>
+
+        <!-- AngularJS -->
+        <script src="vendor/angular.min.js"></script>
+        <script src="vendor/angular-route.min.js"></script>
+        <script src="vendor/angular-sanitize.min.js"></script>
+        <script src="vendor/angular-animate.min.js"></script>
+        <script src="vendor/ui-bootstrap-tpls.min.js"></script>
+
+        <!-- Bootstrap core JS_-->
+        <script src="vendor/bootstrap.min.js"></script>
+
+        <!-- Editor de código -->
+        <script src="vendor/ace.js"></script>
+
+        <!-- App js -->
+        <script src="app.module.js"></script>
+        <script src="app.routes.js"></script>
+        <script src="layout/header.controller.js"></script>
+        <script src="editor_codigo/editor_codigo.controller.js"></script>
+
+    </body>
+</html>

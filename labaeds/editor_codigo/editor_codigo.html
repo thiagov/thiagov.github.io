@@ -1,0 +1,19 @@
+<link href="editor_codigo/editor_codigo.css" rel="stylesheet">
+
+<div id="editor-output">
+<div id="editor">#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+
+int main() {
+    int i;
+    for (i = 0; i < 100; i++) {
+        printf("Ola mundo\n");
+    }
+    return 0;
+}
+</div>
+<div id="output" ng-bind-html="vm.executedCode"></div>
+</div>
+
+
+<button class="btn btn-default" type="submit" ng-click="vm.compile()">Compilar</button>
