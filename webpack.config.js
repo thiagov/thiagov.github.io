@@ -34,7 +34,7 @@ module.exports = {
         }),
         new CopyWebpackPlugin([
             { from: 'src/home/img', to: 'img' },
-            { from: 'resources/**/*' },
+            // { from: 'resources#<{(||)}>#*' },
             { from: 'labaeds/**/*', context: 'src' }
         ]),
         new HtmlWebpackPlugin({
