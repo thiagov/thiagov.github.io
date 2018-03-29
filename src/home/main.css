@@ -1,10 +1,10 @@
-.section-header {
-    color: #1abc9c;
-    text-align: center;
+.flex-centered {
+    display: flex;
+    justify-content: center;
 }
 
-.primary-color-bg {
-    background-color: #1abc9c;
+.section-header {
+    text-align: center;
 }
 
 .gray-bg {
