@@ -1,0 +1,16 @@
+.blue-gray {
+    background-color: #607d8b !important;
+}
+
+.blue-gray-text {
+    color: #607d8b !important;
+}
+
+.gray-bg {
+    background-color: #f2f2f2;
+}
+
+section {
+    padding-top: 55px;
+    margin-bottom: -55px;
+}

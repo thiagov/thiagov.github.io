@@ -1,3 +1,4 @@
 import $ from 'jquery';
-import 'bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap-material-design';
+import 'bootstrap-material-design/dist/css/bootstrap-material-design.css';
+import './main.css';

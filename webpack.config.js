@@ -3,7 +3,6 @@ const webpack = require('webpack');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
-
 module.exports = {
     entry: {
         'home': './src/home/index.js',
@@ -30,7 +29,8 @@ module.exports = {
             $: 'jquery',
             jQuery: 'jquery',
             'window.$': 'jquery',
-            'window.jQuery': 'jquery'
+            'window.jQuery': 'jquery',
+            Popper: ['popper.js', 'default']
         }),
         new CopyWebpackPlugin([
             { from: 'src/home/img', to: 'img' },
